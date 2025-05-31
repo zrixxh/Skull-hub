@@ -37,6 +37,7 @@
       border-radius: 10px;
       padding: 1.5rem;
       border-left: 5px solid;
+      position: relative;
     }
     .tier h2 {
       margin-top: 0;
@@ -46,6 +47,19 @@
     .tier:nth-child(3) { border-color: #9b59b6; }
     .tier:nth-child(4) { border-color: #e67e22; }
     .tier:nth-child(5) { border-color: #e74c3c; }
+    .tier:hover::after {
+      content: attr(data-description);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #2c2c2c;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 0 0 10px 10px;
+      font-size: 0.9rem;
+      z-index: 1;
+    }
     .addons {
       padding: 2rem;
       background: #1f1f1f;
@@ -87,7 +101,7 @@
   </section>
 
   <section class="tiers">
-    <div class="tier">
+    <div class="tier" data-description="🟢 Basic Starter – 250 Robux 💰">
       <h2>🟢 Tier 1: Basic Starter – 250 Robux</h2>
       <ul>
         <li>1-page site (About, Contact)</li>
@@ -95,7 +109,7 @@
         <li>Mobile-friendly</li>
       </ul>
     </div>
-    <div class="tier">
+    <div class="tier" data-description="🔵 Standard Site – 500 Robux 💰">
       <h2>🔵 Tier 2: Standard Site – 500 Robux</h2>
       <ul>
         <li>Multi-section layout</li>
@@ -103,7 +117,7 @@
         <li>Contact form & animations</li>
       </ul>
     </div>
-    <div class="tier">
+    <div class="tier" data-description="🟣 Advanced Site – 1,000 Robux 💰">
       <h2>🟣 Tier 3: Advanced Site – 1,000 Robux</h2>
       <ul>
         <li>Up to 3 pages</li>
@@ -111,7 +125,7 @@
         <li>Smooth effects + social links</li>
       </ul>
     </div>
-    <div class="tier">
+    <div class="tier" data-description="🟠 Pro Site – 3,500 Robux 💰">
       <h2>🟠 Tier 4: Pro Site – 3,500 Robux</h2>
       <ul>
         <li>4–6 custom pages</li>
@@ -119,7 +133,7 @@
         <li>Embedded media + minor backend</li>
       </ul>
     </div>
-    <div class="tier">
+    <div class="tier" data-description="🔴 Ultimate – 5,000+ Robux 💰">
       <h2>🔴 Tier 5: Ultimate – 5,000+ Robux</h2>
       <ul>
         <li>Unlimited pages</li>
